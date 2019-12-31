@@ -3,9 +3,12 @@
 		<el-row :gutter="20">
 			<el-col :span="24">
 				<div class="block">
-					<el-form-item label="综合评分：">
+					<el-form-item label="满意度评分：">
             <el-input-number v-model="formdata.grade" placeholder="请输入分数(0-100)" :max="100" :min="0"></el-input-number>
 					</el-form-item>
+          <el-form-item label="时效评分：">
+            <el-input-number v-model="formdata.emergencyTimeGrade" placeholder="请输入分数(0-100)" :max="100" :min="0"></el-input-number>
+          </el-form-item>
 				</div>
 			</el-col>
 		</el-row>
@@ -24,6 +27,7 @@
 			return {
 				formdata: {
 					grade: 100,
+            emergencyTimeGrade: 100,
 				}
 			}
 		},
@@ -33,7 +37,8 @@
 					if(valid) {
 						var data={
 							id:this.detailDialogId,
-							score:this.formdata.grade
+							score:this.formdata.grade,
+              agingScore:this.formdata.emergencyTimeGrade
 						}
 						this.ajax({
 							url: "emergency/upper/end",
@@ -55,6 +60,7 @@
 			},
 			ClearData() {
 				this.formdata.grade = 100;
+        this.formdata.emergencyTimeGrade = 100;
 			}
 		},
 		watch: {}

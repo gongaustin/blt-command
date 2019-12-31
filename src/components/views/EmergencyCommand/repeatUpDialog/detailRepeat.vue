@@ -178,6 +178,7 @@
 					this.$refs.finish.formdata = {
 						id:this.detailDialogId,
 						grade: 100,
+            underTimeGrade:100,
 					};
 				}, 200);
 			},
@@ -239,16 +240,16 @@
 		min-height: 50px;
 		margin-bottom: 5px;
 	}
-	
+
 	/*提示文字的类名*/
 	.el-tooltip__popper {
-		
+
 	}
-	
+
 	.el-table .cell {
 		height: 23px;
 	}
-	
+
 	.el-table_3_column_18  .cell {
 		height: auto !important;
 	}

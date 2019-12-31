@@ -9,9 +9,17 @@
     <el-row :gutter="20">
       <el-col :span="24">
         <div class="block">
-          <el-form-item label="综合评分：">
+          <el-form-item label="满意度评分：">
             <el-input-number
               v-model="formdata.grade"
+              placeholder="请输入分数(0-100)"
+              :max="100"
+              :min="0"
+            ></el-input-number>
+          </el-form-item>
+          <el-form-item label="时效评分：">
+            <el-input-number
+              v-model="formdata.underTimeGrade"
               placeholder="请输入分数(0-100)"
               :max="100"
               :min="0"
@@ -38,6 +46,7 @@ export default {
     return {
       formdata: {
 		grade: 100,
+    underTimeGrade: 100,
 		opinion: ''
       }
     };
@@ -49,6 +58,7 @@ export default {
           var data = {
             id: this.detailDialogId,
 			score: this.formdata.grade,
+      agingScore: this.formdata.underTimeGrade,
 			opinion: this.formdata.opinion
           };
           this.ajax({
@@ -71,6 +81,7 @@ export default {
     },
     ClearData() {
       this.formdata.grade = 100;
+      this.formdata.underTimeGrade = 100;
     }
   },
   watch: {}

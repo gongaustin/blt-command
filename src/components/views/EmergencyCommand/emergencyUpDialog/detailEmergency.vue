@@ -265,7 +265,8 @@
 				setTimeout(() => {
 					this.$refs.finish.formdata = {
 						id: this.detailDialogId,
-						grade: 3,
+						grade: 100,
+            underTimeGrade: 100,
 					};
 				}, 200);
 			},
