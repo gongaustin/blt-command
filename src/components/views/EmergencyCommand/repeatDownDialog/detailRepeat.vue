@@ -34,7 +34,7 @@
 		</el-row>
 		<el-row>
 			<el-col :span="24">
-				<my-tooltip text="佐证材料"></my-tooltip>
+				<my-tooltip text="文档上传"></my-tooltip>
 				<a style="color: #57a3f3;" href="javascript:;" v-for="item in detailData.attachments" @click="downloadFile(item.url)">{{item.fileName}};</a>
 			</el-col>
 		</el-row>
@@ -70,7 +70,7 @@
 					</el-table-column>
 					<el-table-column prop="crtTime" label="时间" min-width="18%" show-overflow-tooltip>
 					</el-table-column>
-					<el-table-column prop="attachments" label="佐证材料" min-width="20%" show-overflow-tooltip>
+					<el-table-column prop="attachments" label="文档上传" min-width="20%" show-overflow-tooltip>
 						<template slot-scope="row">
 							<a style="color: #57a3f3;" href="javascript:;" v-for="item in row.row.attachments" @click="downloadFile(item.url)">{{item.fileName}};</a>
 						</template>

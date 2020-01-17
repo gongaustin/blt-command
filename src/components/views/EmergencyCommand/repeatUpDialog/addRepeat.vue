@@ -486,7 +486,7 @@
 				this.$message.warning("当前限制选择 6 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件");
 			},
 			beforeAvatarUpload(file) {
-				var maxsize = 20 * 1024 * 1024; //20M
+				var maxsize = 50 * 1024 * 1024; //20M
 
 				var fileSuffix = file.name.substring(file.name.lastIndexOf('.') + 1);
 
@@ -514,16 +514,19 @@
 				const isMPP = fileSuffix === 'mpp';
 				const isOGG = fileSuffix === 'ogg';
 
+        const isRAR = fileSuffix === 'rar';
+        const isZIP = fileSuffix === 'zip';
+
 				const isLt2M = file.size <= maxsize;
-				if(isJPG || isJPEG || isPNG || isGIF || isDOC || isDOCX || isPPT || isPPTX || isXLS || isXLSX || isPDF || isTXT || isWPS || isMP3 || isMP4 || isMPEG || isMPG || isMPP || isOGG) {
+				if(isJPG || isJPEG || isPNG || isGIF || isDOC || isDOCX || isPPT || isPPTX || isXLS || isXLSX || isPDF || isTXT || isWPS || isMP3 || isMP4 || isMPEG || isMPG || isMPP || isOGG || isRAR || isZIP) {
 
 				} else {
-					this.$message.error('仅支持.jpg、.ipeg、.png、.gif、.doc、.docx、.ppt、.pptx、.xls、.xlsx、.pdf、.txt、.wps、.mp3、.mp4、.mpeg、.mpg、.mpp、.ogg格式！');
+					this.$message.error('仅支持.jpg、.ipeg、.png、.gif、.doc、.docx、.ppt、.pptx、.xls、.xlsx、.pdf、.txt、.wps、.mp3、.mp4、.mpeg、.mpg、.mpp、.ogg、.rar、.zip格式！');
 				}
 				if(!isLt2M) {
-					this.$message.error('上传文件不能超过20M！');
+					this.$message.error('上传文件不能超过50M！');
 				}
-				return(isJPG || isJPEG || isPNG || isGIF || isDOC || isDOCX || isPPT || isPPTX || isXLS || isXLSX || isPDF || isTXT || isWPS || isMP3 || isMP4 || isMPEG || isMPG || isMPP || isOGG) && isLt2M
+				return(isJPG || isJPEG || isPNG || isGIF || isDOC || isDOCX || isPPT || isPPTX || isXLS || isXLSX || isPDF || isTXT || isWPS || isMP3 || isMP4 || isMPEG || isMPG || isMPP || isOGG|| isRAR || isZIP) && isLt2M
 			},
 			addRepeat() {
 				let that = this;

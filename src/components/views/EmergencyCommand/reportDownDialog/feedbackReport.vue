@@ -12,7 +12,7 @@
 			</el-row>-->
 			<el-row :gutter="20">
 				<el-col :span="24">
-					<el-form-item label="佐证材料:">
+					<el-form-item label="文档上传:">
 						<el-upload class="upload-demo" :action="UpLoadFileUrl" :headers="Headers" :on-success="handleSuccess" :before-upload="beforeAvatarUpload" :on-remove="handleRemove" :limit="6" :on-exceed="handleExceed" :file-list="fileList">
 							<el-button size="small" type="primary">点击上传</el-button>
 							<!--<div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>-->
@@ -23,7 +23,7 @@
       <el-row :gutter="20">
         <el-col :span="24">
           <el-form-item label="填写说明:">
-            <label>处置情况请以正式文件形式通过[佐证材料]上传，下方填写内容对结果做简单描述，限300字以内</label>
+            <label>处置情况请以正式文件形式通过[文档]上传，下方填写内容对结果做简单描述，限300字以内</label>
           </el-form-item>
         </el-col>
       </el-row>
@@ -96,7 +96,7 @@
 				this.$message.warning("当前限制选择 6 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件");
 			},
 			beforeAvatarUpload(file) {
-				var maxsize = 20 * 1024 * 1024; //20M
+				var maxsize = 50 * 1024 * 1024; //20M
 
 				var fileSuffix=file.name.substring(file.name.lastIndexOf('.')+1);
 
@@ -124,16 +124,19 @@
 				const isMPP = fileSuffix === 'mpp';
 				const isOGG = fileSuffix === 'ogg';
 
+        const isRAR = fileSuffix === 'rar';
+        const isZIP = fileSuffix === 'zip';
+
 				const isLt2M = file.size <= maxsize;
-				if(isJPG || isJPEG || isPNG || isGIF || isDOC || isDOCX || isPPT || isPPTX || isXLS || isXLSX || isPDF || isTXT || isWPS || isMP3 || isMP4 || isMPEG || isMPG || isMPP || isOGG) {
+				if(isJPG || isJPEG || isPNG || isGIF || isDOC || isDOCX || isPPT || isPPTX || isXLS || isXLSX || isPDF || isTXT || isWPS || isMP3 || isMP4 || isMPEG || isMPG || isMPP || isOGG || isRAR || isZIP) {
 
 				} else {
-					this.$message.error('仅支持.jpg、.ipeg、.png、.gif、.doc、.docx、.ppt、.pptx、.xls、.xlsx、.pdf、.txt、.wps、.mp3、.mp4、.mpeg、.mpg、.mpp、.ogg格式！');
+					this.$message.error('仅支持.jpg、.ipeg、.png、.gif、.doc、.docx、.ppt、.pptx、.xls、.xlsx、.pdf、.txt、.wps、.mp3、.mp4、.mpeg、.mpg、.mpp、.ogg、.rar、.zip格式！');
 				}
 				if(!isLt2M) {
-					this.$message.error('上传文件不能超过20M！');
+					this.$message.error('上传文件不能超过50M！');
 				}
-				return(isJPG || isJPEG || isPNG || isGIF || isDOC || isDOCX || isPPT || isPPTX || isXLS || isXLSX || isPDF || isTXT || isWPS || isMP3 || isMP4 || isMPEG || isMPG || isMPP || isOGG) && isLt2M
+				return(isJPG || isJPEG || isPNG || isGIF || isDOC || isDOCX || isPPT || isPPTX || isXLS || isXLSX || isPDF || isTXT || isWPS || isMP3 || isMP4 || isMPEG || isMPG || isMPP || isOGG || isRAR || isZIP) && isLt2M
 			},
 			feedbackReport() {
 				this.$refs['form'].validate((valid) => {

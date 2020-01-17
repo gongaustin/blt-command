@@ -34,7 +34,7 @@
 		</el-row>
 		<el-row>
 			<el-col :span="24">
-				<my-tooltip text="佐证材料"></my-tooltip>
+				<my-tooltip text="文档上传"></my-tooltip>
 				<a style="color: #57a3f3;" href="javascript:;" v-for="item in detailData.attachments" @click="downloadFile(item.url)">{{item.fileName}};</a>
 			</el-col>
 		</el-row>

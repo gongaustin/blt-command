@@ -1,7 +1,7 @@
 //文件上传路径
 // const emrUrl = 'http://new.sevencai.com';
 //测试环境
-const emrUrl = 'http://new.sevencai.cn';
+const emrUrl = 'http://new.sevencai.com';
 const UpLoadFileUrl = emrUrl+':8000/ucenter/upload/file/'
 //修改密码接口
 const modifyPasswordUrl = emrUrl+':8000/ucenter/'
@@ -10,8 +10,8 @@ const modifyPasswordUrl = emrUrl+':8000/ucenter/'
 const proCommonUrl = emrUrl+':8001/emergency/'
 //const devCommonUrl = 'http://120.24.241.113:8001/emergency/'
 const devCommonUrl = emrUrl+':8001/emergency/'
-const backLoginUrl = 'http://localhost:8081/#/login?backUrl=http://localhost:8082/#/'
-// const backLoginUrl = emrUrl+'/ucenter/#/login?backUrl='+emrUrl+'/emergency'
+// const backLoginUrl = 'http://localhost:8081/#/login?backUrl=http://localhost:8082/#/'
+const backLoginUrl = emrUrl+'/ucenter/#/login?backUrl='+emrUrl+'/emergency'
 
 const systemUrl = emrUrl+'/ucenter/#/';
 const commandUrl = emrUrl+'/emergency/#/';
