@@ -7285,3 +7285,9 @@ body.skin-3 {
 	font-weight: bold !important;
 	color: #f00 !important;
 }
+
+
+.el-tooltip__popper{
+  max-width:30%;
+  background-color: #9ea6b9;
+}

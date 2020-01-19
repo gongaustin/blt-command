@@ -23,15 +23,15 @@
 				<el-table :data="tableData" style="width: 100%" border>
 					<el-table-column type="index" label="序号" width="60" show-overflow-tooltip>
 					</el-table-column>
-					<el-table-column prop="content" label="描述" min-width="20%">
-						 <template slot-scope="scope">
-					        <el-popover trigger="hover" placement="top">
-					          <p>{{ scope.row.content }}</p>
-					          <div slot="reference" class="name-wrapper">
-					            <p>{{ scope.row.content}}</p>
-					          </div>
-					        </el-popover>
-					      </template>
+					<el-table-column prop="content" label="描述" min-width="20%" show-overflow-tooltip>
+<!--						 <template slot-scope="scope">-->
+<!--					        <el-popover trigger="hover" placement="top">-->
+<!--					          <p>{{ scope.row.content }}</p>-->
+<!--					          <div slot="reference" class="name-wrapper">-->
+<!--					            <p>{{ scope.row.content}}</p>-->
+<!--					          </div>-->
+<!--					        </el-popover>-->
+<!--					      </template>-->
 					</el-table-column>
 					<el-table-column prop="optTypeName" label="处理" min-width="7%" show-overflow-tooltip>
 					</el-table-column>
@@ -243,6 +243,8 @@
 
 	/*提示文字的类名*/
 	.el-tooltip__popper {
+    max-width:30%;
+    background-color: #9ea6b9;
 
 	}
 

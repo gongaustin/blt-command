@@ -464,5 +464,10 @@
 		.el-dialog__title {
 			font-size: 24px;
 		}
+
+    .el-tooltip__popper{
+      max-width:30%;
+      background-color: #9ea6b9;
+    }
 	}
 </style>

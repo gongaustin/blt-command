@@ -33,7 +33,7 @@ export default {
         },
         /*文本盒子的最大宽度*/
         textWidth: {
-            default: '100',
+            default: '30%',
             type: String
         }
     },
