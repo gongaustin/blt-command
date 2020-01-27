@@ -35,7 +35,8 @@
 		<el-row>
 			<el-col :span="24">
 				<my-tooltip text="网址"></my-tooltip>
-				<span>{{detailData.website}}</span>
+        <a style="color: #57a3f3;" href="javascript:;" v-for="item in detailData.website.split('\n')" @click="downloadFile(item)">{{item}};</a>
+<!--				<span>{{detailData.website}}</span>-->
 			</el-col>
 		</el-row>
 		<el-row>

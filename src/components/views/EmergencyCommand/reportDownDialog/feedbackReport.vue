@@ -23,14 +23,14 @@
       <el-row :gutter="20">
         <el-col :span="24">
           <el-form-item label="填写说明:">
-            <label>处置情况请以正式文件形式通过[文档]上传，下方填写内容对结果做简单描述，限300字以内</label>
+            <label>处置情况请以正式文件形式通过[文档]上传，下方填写内容对结果做简单描述，限50字以内</label>
           </el-form-item>
         </el-col>
       </el-row>
 			<el-row :gutter="20">
 				<el-col :span="12">
 					<el-form-item label="处置内容： " prop="content">
-						<el-input v-model="formdata.content" style="width:360px" type="textarea" :rows="4"></el-input>
+						<el-input v-model="formdata.content" style="width:360px" type="textarea" maxlength="50" :rows="4"></el-input>
 					</el-form-item>
 				</el-col>
 				<el-col :span="12">
