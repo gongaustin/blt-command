@@ -306,14 +306,19 @@ const plugin = {
 		//表单方式直接下载文件
 		//url表示要下载的文件路径,如:htpp://127.0.0.1/test.rar
 		fn.downloadFile = (fileurl) => {
+      var reg = /((http|ftp|https):\/\/)?[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?/g;
+      //正则替换
+      if(!fileurl) return;
+      var new_url = fileurl.match(reg);
+
 			//			var form = $("<form>"); //定义form表单,通过表单发送请求
 			//			form.attr("style", "display:none"); //设置为不显示
 			//			form.attr("target", "");
-			//			form.attr("method", "get"); //设置请求类型  
+			//			form.attr("method", "get"); //设置请求类型
 			//			form.attr("action", fileurl); //设置请求路径
 			//			$("body").append(form); //添加表单到页面(body)中
 			//			form.submit(); //表单提交
-			window.open(fileurl, '_blank')
+			window.open(new_url, '_blank')
 		}
 		//设置cookie值
 		fn.setCookie = (cname, cvalue, exdays) => {
