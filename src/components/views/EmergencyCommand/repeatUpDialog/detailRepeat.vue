@@ -43,7 +43,7 @@
 					</el-table-column>
 					<el-table-column prop="attachments" label="文档上传" min-width="20%" show-overflow-tooltip>
 						<template slot-scope="row">
-							<p style="color: #57a3f3;cursor: pointer;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"  href="javascript:;" v-for="item in row.row.attachments" @click="downloadFile(item.url)">{{item.fileName}};</p>
+							<p style="color: #57a3f3;cursor: pointer;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"  href="javascript:;" v-for="item in row.row.attachments" @click="downloadFile(item.url)">{{item.fileName}}<br></p>
 						</template>
 					</el-table-column>
 					<el-table-column fixed="right"  prop="name" label="操作" min-width="12%" show-overflow-tooltip>

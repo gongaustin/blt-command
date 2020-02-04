@@ -30,7 +30,7 @@
 			<el-col :span="24">
 				<my-tooltip text="网址"></my-tooltip>
         <span style="float: left">
-        <a style="color: #57a3f3;" href="javascript:;" v-for="item in (detailData.website ||'').split(/\n|;|；|,|，/)" @click="downloadFile(item)">{{item}} <br>
+        <a style="color: #57a3f3;" href="javascript:;" v-for="item in (detailData.website ||'').split(/\n|;|；|,|，/)" @click="openRegUrl(item)">{{item}} <br>
 
         </a>
         </span>
@@ -40,8 +40,10 @@
 		<el-row>
 			<el-col :span="24">
 				<my-tooltip text="文档上传"></my-tooltip>
-				<a style="color: #57a3f3;" href="javascript:;" v-for="item in detailData.attachments" @click="downloadFile(item.url)">{{item.fileName}};</a>
-			</el-col>
+        <span style="float: left">
+				<a style="color: #57a3f3;" href="javascript:;" v-for="item in detailData.attachments" @click="downloadFile(item.url)">{{item.fileName}}<br></a>
+        </span>
+      </el-col>
 		</el-row>
 		<el-row>
 			<el-col :span="24">

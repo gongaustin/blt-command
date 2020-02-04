@@ -1,20 +1,20 @@
 //文件上传路径
-// const emrUrl = 'http://new.sevencai.com';
+// var emrUrl = 'http://new.sevencai.com';
 //测试环境
-const emrUrl = 'http://new.sevencai.com';
-const UpLoadFileUrl = emrUrl+':8000/ucenter/upload/file/'
+var emrUrl = 'http://new.sevencai.cn';
+var UpLoadFileUrl = emrUrl+':8000/ucenter/upload/file/'
 //修改密码接口
-const modifyPasswordUrl = emrUrl+':8000/ucenter/'
-//const UpLoadFileUrl = 'http://192.168.2.60:8001/emergency/upload/file'
+var modifyPasswordUrl = emrUrl+':8000/ucenter/'
+//var UpLoadFileUrl = 'http://192.168.2.60:8001/emergency/upload/file'
 //接口路径们
-const proCommonUrl = emrUrl+':8001/emergency/'
-//const devCommonUrl = 'http://120.24.241.113:8001/emergency/'
-const devCommonUrl = emrUrl+':8001/emergency/'
-// const backLoginUrl = 'http://localhost:8081/#/login?backUrl=http://localhost:8082/#/'
-const backLoginUrl = emrUrl+'/ucenter/#/login?backUrl='+emrUrl+'/emergency'
+var proCommonUrl = emrUrl+':8001/emergency/'
+//var devCommonUrl = 'http://120.24.241.113:8001/emergency/'
+var devCommonUrl = emrUrl+':8001/emergency/'
+var backLoginUrl = 'http://localhost:8081/#/login?backUrl=http://localhost:8082/#/'
+// var backLoginUrl = emrUrl+'/ucenter/#/login?backUrl='+emrUrl+'/emergency'
 
-const systemUrl = emrUrl+'/ucenter/#/';
-const commandUrl = emrUrl+'/emergency/#/';
+var systemUrl = emrUrl+'/ucenter/#/';
+var commandUrl = emrUrl+'/emergency/#/';
 
 
 function formatDataDate(data, field) {

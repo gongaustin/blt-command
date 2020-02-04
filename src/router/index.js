@@ -7,7 +7,7 @@ import Cookies from 'js-cookie'
 import fetch from '../components/Common/fetch'
 Vue.use(Router)
 Vue.use(ElementUI)
-const loginurl = backLoginUrl
+var loginurl = backLoginUrl
 
 var routers = [{
 		hiddenMenu: true, //隐藏菜单栏
@@ -165,7 +165,7 @@ if(Cookies.get("perms") && Cookies.get("perms") != 'null') {
 	routers[2].redirect = firstpage;
 }
 
-const router = new Router({
+var router = new Router({
 	routes: routers
 })
 
@@ -270,7 +270,7 @@ function SetMenuList(perms) {
 }
 
 var menuList = []
-const fn = Vue.prototype
+var fn = Vue.prototype
 fn.projectType = []
 // fn.projectIdList = []
 router.beforeEach(async(to, from, next) => {

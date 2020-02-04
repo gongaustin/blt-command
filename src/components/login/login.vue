@@ -101,7 +101,7 @@
 					timeout: 5000,
 				}).then(data => {
 					this.setItem('token', data.token);
-					//const userData = data.user;
+					//var userData = data.user;
 
 					if(this.user.checked) {
 						this.setCookie('username',this.user.username,7);

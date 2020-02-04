@@ -11,9 +11,13 @@ import 'iview/dist/styles/iview.css';
 import { Loading } from 'element-ui';
 import cookies from 'js-cookie'
 
+import 'babel-polyfill'
+import promise from 'es6-promise'
+
+promise.polyfill();
 cookies.set('tenantId',1)
 Vue.use(myplugin)
-const app = new Vue({
+var app = new Vue({
     el: '#app',
     store,
     router,

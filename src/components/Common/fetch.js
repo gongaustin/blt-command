@@ -11,7 +11,7 @@ if(process.env.NODE_ENV === 'production'){
 }
 
 // 创建axios实例
-const service = axios.create({
+var service = axios.create({
   baseURL: baseURL, // api的base_url
   timeout: 15000                  // 请求超时时间
 })
@@ -41,7 +41,7 @@ service.interceptors.response.use(
   /**
   * code为非20000是抛错 可结合自己业务进行修改
   */
-    const res = response.data
+    var res = response.data
     if (res.code !== 200) {
       Message({
         message: res.msg,

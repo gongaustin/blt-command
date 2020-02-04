@@ -284,19 +284,19 @@
 
             //excel数据导出
             require.ensure([], () => {
-                const {
+                var {
                     export_json_to_excel
                 } = require('../../../assets/js/Export2Excel');
-                const tHeader = ['排名','单位/街道/镇', '上报数量', '下派数量','总任务数', '满意度总分', '时效总分','权衡总分（0.8*满意度总分+0.2*时效总分）'];
-                const filterVal = ['range','deptName', 'reportCount', 'underCount', 'taskCount','score','agingScore', 'totalScore'];
+                var tHeader = ['排名','单位/街道/镇', '上报数量', '下派数量','总任务数', '满意度总分', '时效总分','权衡总分（0.8*满意度总分+0.2*时效总分）'];
+                var filterVal = ['range','deptName', 'reportCount', 'underCount', 'taskCount','score','agingScore', 'totalScore'];
                 this.ajax({
                     url: 'score/upper/year/statistics',
                     type: 'get',
                     data: {current:1,size:9999}
                 }).then(data => {
                     this.excelData = data.records;
-                    const list = this.excelData;
-                    const data1 = this.formatJson(filterVal, list);
+                    var list = this.excelData;
+                    var data1 = this.formatJson(filterVal, list);
                     export_json_to_excel(tHeader, data1, '列表excel');
                 })
 

@@ -490,34 +490,34 @@
 
 				var fileSuffix = file.name.substring(file.name.lastIndexOf('.') + 1);
 
-				const isJPG = fileSuffix === 'jpg';
-				const isJPEG = fileSuffix === 'jpeg';
-				const isPNG = fileSuffix === 'png';
-				const isGIF = fileSuffix === 'gif';
+				var isJPG = fileSuffix === 'jpg';
+				var isJPEG = fileSuffix === 'jpeg';
+				var isPNG = fileSuffix === 'png';
+				var isGIF = fileSuffix === 'gif';
 
-				const isDOC = fileSuffix === 'doc';
-				const isDOCX = fileSuffix === 'docx';
+				var isDOC = fileSuffix === 'doc';
+				var isDOCX = fileSuffix === 'docx';
 
-				const isPPT = fileSuffix === 'ppt';
-				const isPPTX = fileSuffix === 'pptx';
+				var isPPT = fileSuffix === 'ppt';
+				var isPPTX = fileSuffix === 'pptx';
 
-				const isXLS = fileSuffix === 'xls';
-				const isXLSX = fileSuffix === 'xlsx';
+				var isXLS = fileSuffix === 'xls';
+				var isXLSX = fileSuffix === 'xlsx';
 
-				const isPDF = fileSuffix === 'pdf';
-				const isTXT = fileSuffix === 'txt';
-				const isWPS = fileSuffix === 'wps';
-				const isMP3 = fileSuffix === 'mp3';
-				const isMP4 = fileSuffix === 'mp4';
-				const isMPEG = fileSuffix === 'mpeg';
-				const isMPG = fileSuffix === 'mpg';
-				const isMPP = fileSuffix === 'mpp';
-				const isOGG = fileSuffix === 'ogg';
+				var isPDF = fileSuffix === 'pdf';
+				var isTXT = fileSuffix === 'txt';
+				var isWPS = fileSuffix === 'wps';
+				var isMP3 = fileSuffix === 'mp3';
+				var isMP4 = fileSuffix === 'mp4';
+				var isMPEG = fileSuffix === 'mpeg';
+				var isMPG = fileSuffix === 'mpg';
+				var isMPP = fileSuffix === 'mpp';
+				var isOGG = fileSuffix === 'ogg';
 
-        const isRAR = fileSuffix === 'rar';
-        const isZIP = fileSuffix === 'zip';
+        var isRAR = fileSuffix === 'rar';
+        var isZIP = fileSuffix === 'zip';
 
-				const isLt2M = file.size <= maxsize;
+				var isLt2M = file.size <= maxsize;
 				if(isJPG || isJPEG || isPNG || isGIF || isDOC || isDOCX || isPPT || isPPTX || isXLS || isXLSX || isPDF || isTXT || isWPS || isMP3 || isMP4 || isMPEG || isMPG || isMPP || isOGG || isRAR || isZIP) {
 
 				} else {

@@ -36,7 +36,7 @@
 			<el-table :data="tableData" style="width: 100%" border :cell-class-name="judgeRead">
 				<el-table-column type="index" label="序号" width="70" show-overflow-tooltip>
 				</el-table-column>
-				<el-table-column prop="title" label="任务名称" min-width="20%" show-overflow-tooltip>
+				<el-table-column prop="title" label="任务名称" min-width="30%" show-overflow-tooltip>
 				</el-table-column>
 				<el-table-column prop="levelName" label="严重等级" min-width="18%" show-overflow-tooltip>
 				</el-table-column>

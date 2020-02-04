@@ -35,7 +35,14 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [resolve('src'),
+                  resolve('test'),
+                  resolve('static'),
+                  resolve('node_modules/weback-dev-server/client'),
+                  resolve('node_modules/element-ui/packages'),
+                  resolve('node_modules/element-ui/src'),
+                  resolve('node_modules/vue-echarts'),
+                  resolve('node_modules/resize-detector'),]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

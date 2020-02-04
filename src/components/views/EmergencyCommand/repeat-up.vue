@@ -27,7 +27,7 @@
 			<el-table :data="tableData" style="width: 100%" border :cell-class-name="judgeRead">
 				<el-table-column type="index" label="序号" width="70" show-overflow-tooltip>
 				</el-table-column>
-				<el-table-column prop="title" label="任务名称" min-width="20%" show-overflow-tooltip>
+				<el-table-column prop="title" label="任务名称" min-width="30%" show-overflow-tooltip>
 				</el-table-column>
 				<el-table-column prop="typeName" label="类型" min-width="18%" show-overflow-tooltip>
 				</el-table-column>
@@ -35,6 +35,8 @@
 				</el-table-column>
 				<el-table-column prop="crtTime" label="创建时间" min-width="18%" show-overflow-tooltip>
 				</el-table-column>
+        <el-table-column prop="endTime" label="规定完成时间" min-width="18%" show-overflow-tooltip>
+        </el-table-column>
 				<el-table-column prop="statusName" label="状态" min-width="13%" show-overflow-tooltip>
 				</el-table-column>
 				<el-table-column fixed="right" label="操作" min-width="13%">
